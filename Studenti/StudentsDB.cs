@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Studenti
 {
-    class Program
+    class StudentsDB
     {
-        static void Main(string[] args)
+        public struct Student
         {
-
-
+            public string meno;
+            public string priezvisko;
+            public int vek;
         }
+        
+
     }
 }
