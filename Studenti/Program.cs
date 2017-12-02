@@ -10,8 +10,14 @@ namespace Studenti
     {
         static void Main(string[] args)
         {
-            Student student = new Student();
+            while (true)
+            {
+                StudentsDB databaza = new StudentsDB();
 
+                databaza.NaplnStudenta();
+                Console.ReadKey();
+
+            }
 
         }
     }

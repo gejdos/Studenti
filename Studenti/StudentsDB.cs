@@ -19,13 +19,20 @@ namespace Studenti
         private string[] priezviska = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
         
 
-
-        public void ZoradStudentov(Student[] student)
+        public void NaplnStudenta()
         {
-            
+
+            Student student = new Student();
+
+            student.meno = mena[new Random().Next(5)];
+            student.priezvisko = priezviska[new Random().Next(5)];
+            student.vek = new Random().Next(15, 81);
+
+            Console.WriteLine(student.meno + " " + student.priezvisko + ", " + student.vek);
+
+            //Student[] student = new Student[] {};
 
         }
-
 
     }
 }
