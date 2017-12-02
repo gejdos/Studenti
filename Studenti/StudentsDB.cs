@@ -6,15 +6,26 @@ using System.Threading.Tasks;
 
 namespace Studenti
 {
+    
+    public struct Student
+    {
+        public string meno, priezvisko;
+        public int vek;
+    }
+
     class StudentsDB
     {
-        public struct Student
-        {
-            public string meno;
-            public string priezvisko;
-            public int vek;
-        }
+        private string[] mena = new string[] { "Jakub", "Jan", "Tomas", "Peter", "Karol" };
+        private string[] priezviska = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
         
+
+
+        public void ZoradStudentov(Student[] student)
+        {
+            
+
+        }
+
 
     }
 }

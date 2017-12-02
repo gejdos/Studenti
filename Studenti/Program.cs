@@ -10,6 +10,7 @@ namespace Studenti
     {
         static void Main(string[] args)
         {
+            Student student = new Student();
 
 
         }
