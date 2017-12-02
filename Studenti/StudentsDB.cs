@@ -21,18 +21,35 @@ namespace Studenti
 
         public void NaplnStudenta()
         {
+            Random r = new Random();
+            Student[] studenti = new Student[10];
 
-            Student student = new Student();
+            for (int i = 0; i < 10; i++)
+            {
+            
+                Student student = new Student();
 
-            student.meno = mena[new Random().Next(5)];
-            student.priezvisko = priezviska[new Random().Next(5)];
-            student.vek = new Random().Next(15, 81);
+                student.meno = mena[r.Next(5)];
+                student.priezvisko = priezviska[r.Next(5)];
+                student.vek = r.Next(15, 81);
 
-            Console.WriteLine(student.meno + " " + student.priezvisko + ", " + student.vek);
+                //Console.WriteLine(student.meno + " " + student.priezvisko + ", " + student.vek);
+
+                studenti[i] = student;
+                //Console.WriteLine(studenti[i].meno + ", " + studenti[i].priezvisko + ", " + i);
+
+            }
 
             //Student[] student = new Student[] {};
 
         }
+
+        public bool ZoradStudentov(Student[] student)
+        {
+            return false;
+        }
+
+
 
     }
 }
