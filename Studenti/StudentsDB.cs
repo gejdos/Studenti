@@ -24,6 +24,7 @@ namespace Studenti
         {
             Student[] newArr = new Student[10];
             Random r = new Random();
+            bool sortBool;
             
             for (int i = 0; i < 10; i++)
             {
@@ -41,17 +42,17 @@ namespace Studenti
             Console.WriteLine("---------------------\nnetriedene pole\n---------------------");
             foreach (Student st in studenti)
             {
-                Console.WriteLine(st.meno + " " + st.priezvisko + ", " + st.vek + " rokov");
+                Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
             }
 
-            
-            ZoradStudentov(studenti, out newArr);
-            Console.WriteLine("\nPole bolo zoradene: " + ZoradStudentov(studenti, out newArr) + "\n");
+            sortBool = ZoradStudentov(studenti, out newArr);
+
+            Console.WriteLine("\nPole bolo zoradene: {0}\n", sortBool);
 
             Console.WriteLine("---------------------\ntriedene pole\n---------------------");
             foreach (Student st in newArr)
             {
-                Console.WriteLine(st.meno + " " + st.priezvisko + ", " + st.vek + " rokov");
+                Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
             }
 
         }
