@@ -48,8 +48,8 @@ namespace Studenti
 
         private bool ZoradStudentov(Student[] array, out Student[] newArray)
         {
-
             int temp;
+            newArray = (Student[]) array.Clone();
 
             for (int write = 0; write < array.Length; write++)
             {
@@ -64,9 +64,6 @@ namespace Studenti
                 }
             }
 
-            newArray = array;
-
-            return false;
         }
 
 
