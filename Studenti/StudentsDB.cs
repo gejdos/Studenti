@@ -39,15 +39,25 @@ namespace Studenti
 
             }
 
+            sortBool = ZoradStudentov(studenti, out newArr);
+
+            if (sortBool)
+            {
+                Console.WriteLine("\nPole je potrebne zoradit ({0})\n", sortBool);
+            }
+            else
+            {
+                Console.WriteLine("\nPole nie je potrebne zoradit ({0})\n", sortBool);
+            }
+
+
             Console.WriteLine("---------------------\nnetriedene pole\n---------------------");
             foreach (Student st in studenti)
             {
                 Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
             }
 
-            sortBool = ZoradStudentov(studenti, out newArr);
-
-            Console.WriteLine("\nPole bolo zoradene: {0}\n", sortBool);
+            //Console.WriteLine("\nPole bolo zoradene: {0}\n", sortBool);
 
             Console.WriteLine("---------------------\ntriedene pole\n---------------------");
             foreach (Student st in newArr)
