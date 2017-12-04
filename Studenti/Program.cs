@@ -14,7 +14,7 @@ namespace Studenti
             {
                 StudentsDB databaza = new StudentsDB();
 
-                databaza.NaplnStudenta();
+                databaza.VytvorDatabazu();
 
                 Console.ReadKey();
 

@@ -20,7 +20,7 @@ namespace Studenti
         private Student student = new Student();
         private Student[] studenti = new Student[10];
 
-        public void NaplnStudenta()
+        public void VytvorDatabazu()
         {
             Student[] newArr = new Student[10];
             Random r = new Random();
@@ -31,40 +31,33 @@ namespace Studenti
                 student.meno = mena[r.Next(5)];
                 student.priezvisko = priezviska[r.Next(5)];
                 student.vek = r.Next(15, 81);
-                //student.vek = i;
-
-                //Console.WriteLine(student.meno + " " + student.priezvisko + ", " + student.vek);
 
                 studenti[i] = student;
-
             }
 
             sortBool = ZoradStudentov(studenti, out newArr);
 
             if (sortBool)
             {
-                Console.WriteLine("\nPole je potrebne zoradit ({0})\n", sortBool);
+                Console.WriteLine("\nPole bolo potrebne zoradit ({0})\n", sortBool);
             }
             else
             {
-                Console.WriteLine("\nPole nie je potrebne zoradit ({0})\n", sortBool);
+                Console.WriteLine("\nPole nebolo potrebne zoradit ({0})\n", sortBool);
             }
 
 
-            Console.WriteLine("---------------------\nnetriedene pole\n---------------------");
+            Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
             foreach (Student st in studenti)
             {
                 Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
             }
 
-            //Console.WriteLine("\nPole bolo zoradene: {0}\n", sortBool);
-
-            Console.WriteLine("---------------------\ntriedene pole\n---------------------");
+            Console.WriteLine("---------------------\nzoradene pole\n---------------------");
             foreach (Student st in newArr)
             {
                 Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
             }
-
         }
 
         private bool ZoradStudentov(Student[] array, out Student[] newArray)
