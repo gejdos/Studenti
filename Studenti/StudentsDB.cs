@@ -17,13 +17,13 @@ namespace Studenti
     {
         private string[] mena = new string[] { "Jakub", "Jan", "Tomas", "Peter", "Karol" };
         private string[] priezviska = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
+        private Student student = new Student();
         private Student[] studenti = new Student[10];
 
         public void NaplnStudenta()
         {
             Random r = new Random();
-            Student student = new Student();
-
+            
             for (int i = 0; i < 10; i++)
             {              
                 student.meno = mena[r.Next(5)];
@@ -34,9 +34,6 @@ namespace Studenti
 
                 studenti[i] = student;
 
-                //ZoradStudentov(studenti);
-
-
             }
 
             foreach (Student st in studenti)
@@ -44,12 +41,15 @@ namespace Studenti
                 Console.WriteLine(st.meno + " " + st.priezvisko + ", " + st.vek + " rokov");
             }
 
+            ZoradStudentov(studenti);
+
         }
 
 
-        private bool ZoradStudentov(Student[] array)
+        private bool ZoradStudentov(Student[] array, out Student[] newArray)
         {
-            int temp = 0;
+
+            int temp;
 
             for (int write = 0; write < array.Length; write++)
             {
@@ -63,6 +63,8 @@ namespace Studenti
                     }
                 }
             }
+
+            newArray = array;
 
             return false;
         }
