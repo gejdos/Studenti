@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Studenti
 {
-    
+
     public struct Student
     {
         public string meno, priezvisko;
@@ -17,12 +13,12 @@ namespace Studenti
     {
         private string[] mena = new string[] { "Jakub", "Jan", "Tomas", "Peter", "Karol" };
         private string[] priezviska = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
-        private Student student = new Student();
         private Student[] studenti = new Student[10];
 
         public void VytvorDatabazu()
         {
             Student[] newArr = new Student[10];
+            Student student = new Student();
             Random r = new Random();
             bool sortBool;
             
@@ -46,17 +42,16 @@ namespace Studenti
                 Console.WriteLine("\nPole nebolo potrebne zoradit ({0})\n", sortBool);
             }
 
-
             Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
-            foreach (Student st in studenti)
+            for (int i = 0; i < studenti.Length; i++)
             {
-                Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
+                Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), studenti[i].meno, studenti[i].priezvisko, studenti[i].vek);
             }
 
             Console.WriteLine("---------------------\nzoradene pole\n---------------------");
-            foreach (Student st in newArr)
+            for (int i = 0; i < newArr.Length; i++)
             {
-                Console.WriteLine("{0} {1}, {2} rokov", st.meno, st.priezvisko, st.vek);
+                Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), newArr[i].meno, newArr[i].priezvisko, newArr[i].vek);
             }
         }
 
@@ -78,7 +73,6 @@ namespace Studenti
                 }
             }
 
-
             for (int i = 0; i < newArray.Length; i++)
             {
                 if (newArray[i].vek != array[i].vek)
@@ -88,12 +82,6 @@ namespace Studenti
             }
 
             return false;
-
         }
-
-
-
-
-
     }
 }
