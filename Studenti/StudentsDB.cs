@@ -2,7 +2,6 @@
 
 namespace Studenti
 {
-
     public struct Student
     {
         public string meno, priezvisko;
@@ -57,6 +56,7 @@ namespace Studenti
             Student temp;
             newArray = (Student[]) array.Clone();
 
+            //bubble sort
             for (int write = 0; write < newArray.Length; write++)
             {
                 for (int sort = 0; sort < newArray.Length - 1; sort++)
