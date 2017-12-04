@@ -36,6 +36,9 @@ namespace Studenti
                 //Console.WriteLine(student.meno + " " + student.priezvisko + ", " + student.vek);
 
                 studenti[i] = student;
+
+                ZoradStudentov(studenti);
+
                 //Console.WriteLine(studenti[i].meno + ", " + studenti[i].priezvisko + ", " + i);
 
             }
@@ -44,8 +47,23 @@ namespace Studenti
 
         }
 
-        public bool ZoradStudentov(Student[] student)
+        private bool ZoradStudentov(Student[] array, out )
         {
+            int temp = 0;
+
+            for (int write = 0; write < array.Length; write++)
+            {
+                for (int sort = 0; sort < array.Length - 1; sort++)
+                {
+                    if (array[sort].vek > array[sort + 1].vek)
+                    {
+                        temp = array[sort + 1].vek;
+                        array[sort + 1].vek = array[sort].vek;
+                        array[sort].vek = temp;
+                    }
+                }
+            }
+
             return false;
         }
 
