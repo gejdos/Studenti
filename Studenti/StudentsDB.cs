@@ -12,22 +12,22 @@ namespace Studenti
     {
         public void VytvorDatabazu()
         {
-            string[] mena = new string[] { "Jakub", "Jan", "Tomas", "Peter", "Karol" };
-            string[] priezviska = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
+            string[] menaArr = new string[] { "Jakub", "Jan", "Tomas", "Peter", "Karol" };
+            string[] priezviskaArr = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
             Student[] studentiArr = new Student[10];
-            Student[] newArr = new Student[10];
+            Student[] studentiNewArr = new Student[10];
             Random r = new Random();
             bool sortBool;            
 
             for (int i = 0; i < 10; i++)
             {
-                studentiArr[i].meno = mena[r.Next(5)];
-                studentiArr[i].priezvisko = priezviska[r.Next(5)];
+                studentiArr[i].meno = menaArr[r.Next(5)];
+                studentiArr[i].priezvisko = priezviskaArr[r.Next(5)];
                 studentiArr[i].vek = r.Next(15, 81);
                 //studentiArr[i].vek = i + 20; //testovanie zoradeneho pola
             }
 
-            sortBool = ZoradStudentov(studentiArr, out newArr);
+            sortBool = ZoradStudentov(studentiArr, out studentiNewArr);
                 
             Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
             for (int i = 0; i < studentiArr.Length; i++)
@@ -36,9 +36,9 @@ namespace Studenti
             }
 
             Console.WriteLine("---------------------\nzoradene pole\n---------------------");
-            for (int i = 0; i < newArr.Length; i++)
+            for (int i = 0; i < studentiNewArr.Length; i++)
             {
-                Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), newArr[i].meno, newArr[i].priezvisko, newArr[i].vek);
+                Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), studentiNewArr[i].meno, studentiNewArr[i].priezvisko, studentiNewArr[i].vek);
             }
 
             if (sortBool)
