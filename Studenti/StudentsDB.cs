@@ -2,14 +2,14 @@
 
 namespace Studenti
 {
-    public struct Student
-    {
-        public string meno, priezvisko;
-        public int vek;
-    }
-
     class StudentsDB
     {
+        private struct Student
+        {
+            public string meno, priezvisko;
+            public int vek;
+        }
+
         public void VytvorDatabazu()
         {
             string[] menaArr = new string[] { "Jakub", "Jan", "Tomas", "Peter", "Karol" };
