@@ -24,6 +24,7 @@ namespace Studenti
                 studentiArr[i].meno = mena[r.Next(5)];
                 studentiArr[i].priezvisko = priezviska[r.Next(5)];
                 studentiArr[i].vek = r.Next(15, 81);
+                //studentiArr[i].vek = i + 20; //testovanie zoradeneho pola
             }
 
             sortBool = ZoradStudentov(studentiArr, out newArr);
