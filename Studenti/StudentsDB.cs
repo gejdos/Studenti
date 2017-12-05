@@ -17,8 +17,7 @@ namespace Studenti
             Student[] studentiArr = new Student[10];
             Student[] newArr = new Student[10];
             Random r = new Random();
-            bool sortBool;
-            
+            bool sortBool;            
 
             for (int i = 0; i < 10; i++)
             {
@@ -28,16 +27,7 @@ namespace Studenti
             }
 
             sortBool = ZoradStudentov(studentiArr, out newArr);
-
-            if (sortBool)
-            {
-                Console.WriteLine("\nPole bolo potrebne zoradit ({0})\n", sortBool);
-            }
-            else
-            {
-                Console.WriteLine("\nPole nebolo potrebne zoradit ({0})\n", sortBool);
-            }
-
+                
             Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
             for (int i = 0; i < studentiArr.Length; i++)
             {
@@ -48,6 +38,15 @@ namespace Studenti
             for (int i = 0; i < newArr.Length; i++)
             {
                 Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), newArr[i].meno, newArr[i].priezvisko, newArr[i].vek);
+            }
+
+            if (sortBool)
+            {
+                Console.WriteLine("\nPole bolo potrebne zoradit ({0})\n", sortBool);
+            }
+            else
+            {
+                Console.WriteLine("\nPole nebolo potrebne zoradit ({0})\n", sortBool);
             }
         }
 
