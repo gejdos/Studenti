@@ -91,9 +91,6 @@ namespace Studenti
                 }
 
                 if (!triedene) break;
-                //inline podmienka
-                //bool bolo = true;
-                //triedene = (bolo) ? true : false;
             }
 
             return triedene;

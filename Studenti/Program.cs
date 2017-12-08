@@ -9,6 +9,11 @@ namespace Studenti
             StudentsDB databaza = new StudentsDB();
             databaza.VytvorDatabazu();
 
+            //inline podmienka
+            //bool bolo = true;
+            //triedene = (bolo) ? true : false;
+            //int dlzka = (newArray.Length == 10) ? 1 : 0;
+
             Console.ReadKey();
         }
     }
