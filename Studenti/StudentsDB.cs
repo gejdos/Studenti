@@ -55,6 +55,7 @@ namespace Studenti
         private bool ZoradStudentov(Student[] array, out Student[] newArray)
         {
             Student temp;
+            bool zoradene = false;
             newArray = (Student[])array.Clone();
 
             //bubble sort
@@ -62,26 +63,20 @@ namespace Studenti
             {
                 for (int sort = 0; sort < newArray.Length - 1 - write; sort++)
                 {
-                    //Console.WriteLine(newArray[sort].vek + " " + newArray[sort + 1].vek);
-
                     if (newArray[sort].vek > newArray[sort + 1].vek)
                     {
+                        zoradene = true;
+
                         temp = newArray[sort + 1];
                         newArray[sort + 1] = newArray[sort];
                         newArray[sort] = temp;
                     }
                 }
+
+                if (!zoradene) break;
             }
 
-            for (int i = 0; i < newArray.Length; i++)
-            {
-                if (newArray[i].vek != array[i].vek)
-                {
-                    return true;
-                }               
-            }
-
-            return false;
+            return zoradene;
         }
     }
 }
