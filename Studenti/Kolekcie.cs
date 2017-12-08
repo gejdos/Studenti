@@ -13,6 +13,8 @@ namespace Studenti
         Queue fronta = new Queue();
         //zasobnik LIFO - "last in, first out"
         Stack zasobnik = new Stack();
+        //
+        Hashtable table = new Hashtable();
 
         public void NaplnFrontu()
         {
@@ -38,13 +40,21 @@ namespace Studenti
 
             string s = zasobnik.Pop().ToString();
 
-
-
-            //foreach (string str in zasobnik)
-            //{
-            //    Console.WriteLine(str);
-            //}
+            foreach (object str in zasobnik)
+            {
+                Console.WriteLine(str);
+            }
 
         }
+
+        public void NaplnTabulku()
+        {
+            table["Jakub Gejdos"] = "123456789";
+            table["Tomas"] = "15185166560";
+
+            table.Remove("Tomas");
+;
+        }
+           
     }
 }

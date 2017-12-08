@@ -12,7 +12,7 @@ namespace Studenti
             Kolekcie K = new Kolekcie();
             //K.NaplnFrontu();
             K.NaplnZasobnik();
-            
+            //K.NaplnTabulku();
 
             //inline podmienka
             //bool bolo = true;
