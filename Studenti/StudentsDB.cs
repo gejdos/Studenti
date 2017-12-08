@@ -29,7 +29,6 @@ namespace Studenti
             Student[] studentiArr = new Student[dlzkaPola];
             Student[] studentiNewArr = new Student[dlzkaPola];
             ArrayList zoznamStudentov = new ArrayList();
-
             Random r = new Random();
             bool sortBool;
 
@@ -39,14 +38,18 @@ namespace Studenti
                 studentiArr[i].Priezvisko = priezviskaArr[r.Next(5)];
                 studentiArr[i].Vek = r.Next(15, 81);
                 //studentiArr[i].Vek = i + 20; //testovanie zoradeneho pola
+
+                zoznamStudentov.Add(studentiArr[i]);
+                //zoznamStudentov.Remove();
+                //zoznamStudentov.Count;
             }
 
             sortBool = ZoradStudentov(studentiArr, out studentiNewArr);
                 
             Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
-            for (int i = 0; i < studentiArr.Length; i++)
+            foreach (Student s in zoznamStudentov)
             {
-                Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), studentiArr[i].Meno, studentiArr[i].Priezvisko, studentiArr[i].Vek);
+                Console.WriteLine("{0} {1}, {2} rokov", s.Meno, s.Priezvisko, s.Vek);
             }
 
             Console.WriteLine("---------------------\nzoradene pole\n---------------------");
