@@ -28,7 +28,7 @@ namespace Studenti
             string[] priezviskaArr = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
             Student[] studentiArr = new Student[dlzkaPola];
             Student[] studentiNewArr = new Student[dlzkaPola];
-            ArrayList zoznamStudentov = new ArrayList();
+            //ArrayList zoznamStudentov = new ArrayList();
             Random r = new Random();
             bool sortBool;
 
@@ -39,18 +39,18 @@ namespace Studenti
                 studentiArr[i].Vek = r.Next(15, 81);
                 //studentiArr[i].Vek = i + 20; //testovanie zoradeneho pola
 
-                zoznamStudentov.Add(studentiArr[i]);
-                //zoznamStudentov.Remove();
-                //zoznamStudentov.Count;
+                //zoznamStudentov.Add(studentiArr[i]);
+                ////zoznamStudentov.Remove();
+                ////zoznamStudentov.Count;
             }
 
             sortBool = ZoradStudentov(studentiArr, out studentiNewArr);
                 
             Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
-            foreach (Student s in zoznamStudentov)
-            {
-                Console.WriteLine("{0} {1}, {2} rokov", s.Meno, s.Priezvisko, s.Vek);
-            }
+            //foreach (Student s in zoznamStudentov)
+            //{
+            //    Console.WriteLine("{0} {1}, {2} rokov", s.Meno, s.Priezvisko, s.Vek);
+            //}
 
             Console.WriteLine("---------------------\nzoradene pole\n---------------------");
             for (int i = 0; i < studentiNewArr.Length; i++)
@@ -79,8 +79,8 @@ namespace Studenti
             {
                 for (int sort = 0; sort < newArray.Length - 1 - write; sort++)
                 {
-                    //implementovany operator ">"
-                    if (newArray[sort] > newArray[sort + 1])
+                    
+                    if (newArray[sort] > newArray[sort + 1]) //implementovany operator ">"
                     {
                         triedene = true;
 
