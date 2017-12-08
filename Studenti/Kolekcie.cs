@@ -11,9 +11,11 @@ namespace Studenti
     {
         //fronta FIFO - "first in, first out"
         Queue fronta = new Queue();
+        //zasobnik LIFO - "last in, first out"
+        Stack zasobnik = new Stack();
 
         public void NaplnFrontu()
-        {         
+        {
             fronta.Enqueue("Pavel");
             fronta.Enqueue("Jakub");
             fronta.Enqueue("Jan");
@@ -24,6 +26,10 @@ namespace Studenti
             {
                 Console.WriteLine(str);
             }
+
+            zasobnik.Push("");
+
+            
 
         }
     }
