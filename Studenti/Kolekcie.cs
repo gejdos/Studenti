@@ -26,10 +26,24 @@ namespace Studenti
             {
                 Console.WriteLine(str);
             }
-
-            zasobnik.Push("");
-
             
+        }
+
+        public void NaplnZasobnik()
+        {   
+            zasobnik.Push(10);
+            zasobnik.Push(5);
+            zasobnik.Push("Jakub");
+            zasobnik.Push("Pavel");
+
+            string s = zasobnik.Pop().ToString();
+
+
+
+            //foreach (string str in zasobnik)
+            //{
+            //    Console.WriteLine(str);
+            //}
 
         }
     }

@@ -9,8 +9,10 @@ namespace Studenti
             //StudentsDB databaza = new StudentsDB();
             //databaza.VytvorDatabazu();
 
-            Kolekcie k = new Kolekcie();
-            k.NaplnFrontu();
+            Kolekcie K = new Kolekcie();
+            //K.NaplnFrontu();
+            K.NaplnZasobnik();
+            
 
             //inline podmienka
             //bool bolo = true;
