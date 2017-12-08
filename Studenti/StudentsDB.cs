@@ -4,10 +4,20 @@ namespace Studenti
 {
     class StudentsDB
     {
-        private struct Student
+        public struct Student
         {
             public string meno, priezvisko;
             public int vek;
+
+            public static bool operator >(Student student1, Student student2)
+            {
+                return (student1.vek > student2.vek);
+            }
+
+            public static bool operator <(Student student1, Student student2)
+            {
+                return (student1.vek < student2.vek);
+            }
         }
 
         public void VytvorDatabazu()
@@ -63,7 +73,7 @@ namespace Studenti
             {
                 for (int sort = 0; sort < newArray.Length - 1 - write; sort++)
                 {
-                    if (newArray[sort].vek > newArray[sort + 1].vek)
+                    if (newArray[sort] > newArray[sort + 1])
                     {
                         zoradene = true;
 
@@ -78,5 +88,14 @@ namespace Studenti
 
             return zoradene;
         }
+
+
+
+
+
+
+
+
+  
     }
 }
