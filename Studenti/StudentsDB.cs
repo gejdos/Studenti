@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Studenti
 {
@@ -27,6 +28,8 @@ namespace Studenti
             string[] priezviskaArr = new string[] { "Gejdos", "Rajcan", "Novak", "Jancovic", "Hudec" };
             Student[] studentiArr = new Student[dlzkaPola];
             Student[] studentiNewArr = new Student[dlzkaPola];
+            ArrayList zoznamStudentov = new ArrayList();
+
             Random r = new Random();
             bool sortBool;
 
