@@ -12,6 +12,19 @@ namespace Studenti
         //fronta FIFO - "first in, first out"
         Queue fronta = new Queue();
 
+        public void NaplnFrontu()
+        {         
+            fronta.Enqueue("Pavel");
+            fronta.Enqueue("Jakub");
+            fronta.Enqueue("Jan");
 
+            //string s = (string) fronta.Dequeue();
+
+            foreach (string str in fronta)
+            {
+                Console.WriteLine(str);
+            }
+
+        }
     }
 }

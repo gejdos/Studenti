@@ -6,8 +6,11 @@ namespace Studenti
     {
         static void Main(string[] args)
         {
-            StudentsDB databaza = new StudentsDB();
-            databaza.VytvorDatabazu();
+            //StudentsDB databaza = new StudentsDB();
+            //databaza.VytvorDatabazu();
+
+            Kolekcie k = new Kolekcie();
+            k.NaplnFrontu();
 
             //inline podmienka
             //bool bolo = true;
