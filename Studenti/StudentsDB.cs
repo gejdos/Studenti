@@ -45,12 +45,13 @@ namespace Studenti
             }
 
             sortBool = ZoradStudentov(studentiArr, out studentiNewArr);
-                
+
             Console.WriteLine("---------------------\nnezoradene pole\n---------------------");
-            //foreach (Student s in zoznamStudentov)
-            //{
-            //    Console.WriteLine("{0} {1}, {2} rokov", s.Meno, s.Priezvisko, s.Vek);
-            //}
+            for (int i = 0; i < studentiArr.Length; i++)
+            {
+                Console.WriteLine("{0}. {1} {2}, {3} rokov", (i + 1), studentiArr[i].Meno, studentiArr[i].Priezvisko, studentiArr[i].Vek);
+            }
+
 
             Console.WriteLine("---------------------\nzoradene pole\n---------------------");
             for (int i = 0; i < studentiNewArr.Length; i++)

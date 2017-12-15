@@ -6,12 +6,12 @@ namespace Studenti
     {
         static void Main(string[] args)
         {
-            //StudentsDB databaza = new StudentsDB();
-            //databaza.VytvorDatabazu();
+            StudentsDB databaza = new StudentsDB();
+            databaza.VytvorDatabazu();
 
-            Kolekcie K = new Kolekcie();
+            //Kolekcie K = new Kolekcie();
             //K.NaplnFrontu();
-            K.NaplnZasobnik();
+            //K.NaplnZasobnik();
             //K.NaplnTabulku();
 
             //inline podmienka
